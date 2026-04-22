@@ -4,7 +4,7 @@ How the Notes app is deployed to Azure.
 
 ## Architecture
 
-```
+```text
 ┌──────────────┐      ┌──────────────┐      ┌──────────────┐
 │  Static Web  │      │  App Service │      │  Azure SQL   │
 │     App      │─────▶│  (Linux, F1) │─────▶│  Serverless  │
@@ -47,7 +47,7 @@ How the Notes app is deployed to Azure.
 
 ## Repository layout
 
-```
+```text
 infra/
 ├── main.bicep                  subscription-scope; creates RG + workload
 ├── main.dev.bicepparam         dev params (reads env vars, no literals)
