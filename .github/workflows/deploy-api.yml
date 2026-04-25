@@ -23,7 +23,7 @@ run: dotnet publish -c Release -o ./output
 - uses: actions/upload-artifact@v4
 with:
 name: api
-path: backend/output
+path: backend/Notes.Api/output
 deploy:
   needs: build-and-test
   runs-on: ubuntu-latest
