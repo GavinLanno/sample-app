@@ -17,6 +17,11 @@ builder.Services.AddCors(options =>
         .AllowAnyMethod());
 });
 
+builder.Services.AddCors(o => o.AddDefaultPolicy(p =>
+p.WithOrigins("https://agreeable-smoke-04090990f.7.azurestaticapps.net/")
+.AllowAnyHeader()
+.AllowAnyMethod()));
+
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
@@ -29,7 +34,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-app.UseCors("Frontend");
+app.UseCors();
 app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();
