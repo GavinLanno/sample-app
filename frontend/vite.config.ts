@@ -2,6 +2,7 @@
 import { defineConfig } from 'vitest/config'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
+const API_BASE_URL = import.meta.env.production.VITE_API_URL
 
 // https://vite.dev/config/
 export default defineConfig({
